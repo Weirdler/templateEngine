@@ -1,9 +1,12 @@
 const express = require('express')
 const app = express();
 
-app.get('/', function(req, res){
+// MIDDLE TIME
+app.set("view engine","ejs");
+
+app.get('/home', function(req, res){
     console.log('bruh')
-    res.send('gay boi');
+    res.render('home');
 });
 
 app.listen(3000, function(err){
